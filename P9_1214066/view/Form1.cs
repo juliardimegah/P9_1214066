@@ -130,5 +130,28 @@ namespace P9_1214066
             email.Text = "";
             nohp.Text = "";
         }
+
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+            DialogResult pesan = MessageBox.Show("Apakah yakin akan menghapus data ini?", "Perhatian", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (pesan == DialogResult.Yes)
+            {
+                Mahasiswa mhs = new Mahasiswa();
+                mhs.Delete(id);
+                Tampil();
+
+                npm.Text = "";
+                nama.Text = "";
+                angkatan.SelectedIndex = -1;
+                alamat.Text = "";
+                email.Text = "";
+                nohp.Text = "";
+            }
+        }
+
+        private void tbCariData_TextChanged(object sender, EventArgs e)
+        {
+            datamahasiswa.DataSource = koneksi.ShowData("SELECT * FROM t_mahasiswa WHERE npm LIKE '%' '" + tbCariData.Text + "' '%' OR nama LIKE '%' '"+ tbCariData.Text + "' '%'");
+        }
     }
 }

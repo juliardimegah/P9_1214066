@@ -61,9 +61,9 @@ namespace P9_1214066.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("DELETE FROM t_");
+                koneksi.ExecuteQuery("DELETE FROM t_mahasiswa WHERE npm = '" + id + "'");
                 status = true;
-                MessageBox.Show("Data berhasil diubah", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.CloseConnection();
             }
             catch (Exception e)
