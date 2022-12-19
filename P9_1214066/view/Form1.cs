@@ -1,5 +1,6 @@
 ﻿using P9_1214066.controller;
 using P9_1214066.model;
+using P9_1214066.view;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -152,6 +154,13 @@ namespace P9_1214066
         private void tbCariData_TextChanged(object sender, EventArgs e)
         {
             datamahasiswa.DataSource = koneksi.ShowData("SELECT * FROM t_mahasiswa WHERE npm LIKE '%' '" + tbCariData.Text + "' '%' OR nama LIKE '%' '"+ tbCariData.Text + "' '%'");
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            home form1 = new home();
+            form1.Show();
+            this.Hide();
         }
     }
 }

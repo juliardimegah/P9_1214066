@@ -39,5 +39,13 @@ namespace P9_1214066
             object datatable = data.Tables[0];
             return datatable;
         }
+
+        public MySqlDataReader reader(string query)
+        {
+            MySqlCommand cmd = new MySqlCommand(query, kon);
+            MySqlDataReader dr = cmd.ExecuteReader();
+            return dr;
+
+        }
     }
 }
