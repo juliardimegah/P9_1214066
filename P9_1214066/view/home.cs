@@ -29,5 +29,12 @@ namespace P9_1214066.view
         {
             this.Close();
         }
+
+        private void nToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            nilai nilai = new nilai();
+            nilai.Show();
+            this.Hide();
+        }
     }
 }

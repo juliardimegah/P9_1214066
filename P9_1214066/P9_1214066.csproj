@@ -86,7 +86,9 @@
   <ItemGroup>
     <Compile Include="controller\CekLogin.cs" />
     <Compile Include="controller\Mahasiswa.cs" />
+    <Compile Include="controller\Nilai.cs" />
     <Compile Include="model\M_mahasiswa.cs" />
+    <Compile Include="model\M_Nilai.cs" />
     <Compile Include="view\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +110,12 @@
     <Compile Include="view\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\nilai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\nilai.Designer.cs">
+      <DependentUpon>nilai.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="view\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\nilai.resx">
+      <DependentUpon>nilai.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
